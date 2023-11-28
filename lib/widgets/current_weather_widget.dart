@@ -9,8 +9,26 @@ class CurrentWeatherWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('${weatherDataCurrent.current.windSpeed}'),
+    return Column(
+      children: [
+        // Área da temperatura
+        temperatureAreaWidget(),
+        // Mais detalhes - Velocidade do vento, humidade, nuvens, etc...
+        currentWeatherDetailed()
+      ],
+    );
+  }
+
+  Widget currentWeatherDetailed() {
+    return Container();
+  }
+
+  Widget temperatureAreaWidget() {
+    return Row(
+      children: [
+        Image.asset(
+            "assets/weather/${weatherDataCurrent.current.weather![0].icon}.png")
+      ],
     );
   }
 }
