@@ -33,7 +33,7 @@ class HourlyDataWidget extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: weatherDataHourly.hourly.length > 12
-            ? 14
+            ? 12
             : weatherDataHourly.hourly.length,
         itemBuilder: (context, index) {
           return Obx((() => GestureDetector(
@@ -92,7 +92,7 @@ class HourlyDetails extends StatelessWidget {
 
   String getTime(final timeStamp) {
     DateTime time = DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000);
-    String x = DateFormat('Hm').format(time);
+    String x = DateFormat('Hm').format(time.toLocal());
     return x;
   }
 

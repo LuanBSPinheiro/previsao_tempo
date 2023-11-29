@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:previsao_tempo/controller/global_controller.dart';
 import 'package:previsao_tempo/widgets/current_weather_widget.dart';
+import 'package:previsao_tempo/widgets/daily_data_forecast.dart';
 import 'package:previsao_tempo/widgets/header_widget.dart';
 import 'package:previsao_tempo/widgets/hourly_data_widget.dart';
 
@@ -42,7 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   HourlyDataWidget(
                       weatherDataHourly:
-                          globalController.getData().getHourlyWeather())
+                          globalController.getData().getHourlyWeather()),
+                  DailyDataForecast(
+                    weatherDataDaily:
+                        globalController.getData().getDailyWeather(),
+                  ),
                 ],
               ),
             )),

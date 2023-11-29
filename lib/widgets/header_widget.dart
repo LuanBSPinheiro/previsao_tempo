@@ -14,7 +14,7 @@ class HeaderWidget extends StatefulWidget {
 class _HeaderWidgetState extends State<HeaderWidget> {
   String city = "";
   // Ajustar para ler a data em PT_BR
-  String date = DateFormat("d MMM, y").format(DateTime.now());
+  String date = DateFormat("d MMM, y", "pt_BR").format(DateTime.now());
 
   final GlobalController globalController =
       Get.put(GlobalController(), permanent: true);
@@ -30,7 +30,13 @@ class _HeaderWidgetState extends State<HeaderWidget> {
     List<Placemark> placemark = await placemarkFromCoordinates(lat, lon);
     Placemark place = placemark[0];
     setState(() {
-      city = place.locality!;
+      if (place.locality?.isNotEmpty == true) {
+        city = place.locality!;
+      } else if (place.subLocality?.isNotEmpty == true) {
+        city = place.subLocality!;
+      } else if (place.administrativeArea?.isNotEmpty == true) {
+        city = place.administrativeArea!;
+      }
     });
   }
 
