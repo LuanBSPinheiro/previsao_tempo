@@ -1,16 +1,17 @@
-# previsao_tempo
+# Previsão do tempo
 
-A new Flutter project.
+Aplicativo criado visando estudo e entendimento do Flutter, usando libs como Geolocation, Geocoding, GetX e Intl
 
-## Getting Started
+## Sobre o aplicativo
 
-This project is a starting point for a Flutter application.
+O aplicativo de previsão do tempo obtem informações sobre o tempo, após usuário conceder as permissões, baseado nas coordenadas do usuário, onde utiliza a API do OpenWeather para obter a previsão do tempo atual, mostrando as próximas 12 horas,  dos próximos 7 dias (dia atual incluso com máxima e mínima), nível de conforto em umidade, sensação térmica e índice de raios ultravioletas.
 
-A few resources to get you started if this is your first Flutter project:
+## Telas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Tela inicial do aplicativo](https://i.imgur.com/NMi5gPQ.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Tela mostrando a possibilidade de selecionar para melhor visualização outro horário e mostrando os próximos dias](https://i.imgur.com/r6xaAG4.png)
+
+![Tela mostrando nível de conforto, sensação térmica e índice de raios UV](https://i.imgur.com/muh7lAO.png)
+
+
