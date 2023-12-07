@@ -1,7 +1,4 @@
 //Instancia para obter a resposta da API
-
-import 'package:flutter/material.dart';
-
 class WeatherDataCurrent {
   final Current current;
   WeatherDataCurrent({required this.current});

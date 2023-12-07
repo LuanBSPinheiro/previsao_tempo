@@ -16,7 +16,7 @@ class CurrentWeatherWidget extends StatelessWidget {
         temperatureAreaWidget(),
 
         const SizedBox(height: 20),
-        // Mais detalhes - Velocidade do vento, humidade, nuvens, etc...
+        // Mais detalhes - Velocidade do vento, umidade, nuvens, etc...
         currentWeatherDetailed()
       ],
     );
